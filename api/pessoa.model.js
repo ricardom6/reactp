@@ -1,7 +1,8 @@
 // Pessoa.model.js
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-​
+
 // Define collection and schema for Pessoa
 let Pessoa = new Schema({
   nome: {
@@ -16,5 +17,5 @@ let Pessoa = new Schema({
 },{
     collection: 'pessoa'
 });
-​
+
 module.exports = mongoose.model('Pessoa', Pessoa);
