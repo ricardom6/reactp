@@ -2,6 +2,10 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+//Alterar botão de edição.
+
 
 class TableRow extends Component {
   constructor(props) {
@@ -27,10 +31,11 @@ class TableRow extends Component {
           {this.props.obj.telefone}
         </td>
         <td>
-          <button className="btn btn-primary">Editar</button>
+          <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary">Editar</Link>
         </td>
         <td>
-          <button className="btn btn-danger">Remover</button>
+          <button onClick={this.delete} className="btn btn-danger">Remover</button>
+          
         </td>
       </tr>
     );
